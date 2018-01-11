@@ -1,1 +1,22 @@
-<ion-nav [root]="rootPage"></ion-nav>
+
+<ion-menu [content]="nav">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list >
+      <button ion-item (click)="openPage(tabsPage)">
+        <i class="fa fa-quote-left fa-lg" aria-hidden="true" item-left></i>
+        Quotes
+      </button>
+      <button ion-item (click)="openPage(settingsPage)">
+          <i class="fa fa-sliders fa-lg" aria-hidden="true" item-left></i>
+        Settings
+      </button>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav [root]="tabsPage" #nav></ion-nav>
